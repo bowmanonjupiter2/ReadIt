@@ -1,0 +1,19 @@
+{
+	"manifest_version" : 2,
+	"name" : "Read It",
+	"description" : "This extension read the paragraph you have selected",
+	"version" : "1.0",
+	"icons" : {"128":"icon.png"},
+	"browser_action" : {
+		"default_title" : "Read It",
+		"default_icon" : "icon.png"
+	},
+	"content_scripts" :[
+		{
+			"matches" : ["<all_urls>"],
+			"js" : [
+				"text2Speech.js"
+			]
+		}
+	]
+}
